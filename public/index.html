@@ -18,7 +18,7 @@
 
         <header class="mb-5">
             <h1 class="display-1">Francis Perron <small class="h5 d-block text-secondary">@SatoshiQC</small></h1>
-            <div class="mb-2" data-bs-toggle="tooltip" data-bs-title="This is my Nostr address"><span class="badge bg-secondary fw-normal"><span style="user-select: none;">🔑 </span>npub1jgctkwga7hgplq3fxeerhquxxatewluyyc5gf99t9hlekt3n3x8qalupqk</span></div>
+            <div class="mb-2" data-bs-toggle="tooltip" data-bs-title="Copy my address to your clipboard" onclick="copyNpub()"><div class="badge bg-secondary fw-normal"><span style="user-select: none;">🔑 </span><span id="npub">npub1jgctkwga7hgplq3fxeerhquxxatewluyyc5gf99t9hlekt3n3x8qalupqk</span></div></div>
             <a href="nostr:npub1jgctkwga7hgplq3fxeerhquxxatewluyyc5gf99t9hlekt3n3x8qalupqk" class="btn btn-sm btn-primary fw-bold">Open with Nostr client</a> <small>or</small>
             <a href="https://snort.social/p/npub1jgctkwga7hgplq3fxeerhquxxatewluyyc5gf99t9hlekt3n3x8qalupqk" class="btn btn-sm btn-link ps-0">View with Snort</a>
         </header>
@@ -36,6 +36,14 @@
     <script>
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
         const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+        // copy to clipboard
+        function copyNpub() {
+            // Get the text field
+            var copyText = document.getElementById("npub").innerHTML;
+            console.log(copyText);
+            navigator.clipboard.writeText(copyText)
+        }
     </script>
 
 </body>
