@@ -1,3 +1,3 @@
 # Redirects from what the browser requests to what we serve
 /                   nostr:npub1jgctkwga7hgplq3fxeerhquxxatewluyyc5gf99t9hlekt3n3x8qalupqk
-/nostr              https://getalby.com/f
+/alby               https://getalby.com/f
